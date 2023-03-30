@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { bookData } from '../assets/db';
 import BookItem from '../components/booksComponents/BookItem';
 
@@ -16,6 +16,8 @@ function SingleBookPage() {
     console.log('radom foundBookObj ===', foundBookObj);
   } else {
     console.log('neradom');
+    // nunaviguoti programiskai i not found
+    return <Navigate to="/not-found" />;
   }
   // sugeneruoti visa jo informacija su stilium jsx
 
