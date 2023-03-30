@@ -15,3 +15,12 @@ https://reactrouter.com/en/main - docs
 ## styled
 
 1. npm i styled-components
+
+## mini uzd
+
+1.  padaryti kad /books adresas parodytu BooksList.jsx komponenta
+2.  // padaryti kad /books/1 adresas parodytu SingleBookPage.jsx komponenta
+3.  prideti books i Headerio navigacija
+4.  // sugeneruoti BookItems is bookData masyvo
+    // atvaizduoti tik title ir metus
+5.  BookItems turi buti nuorodos elementas kuris veda i SingleBookPage
