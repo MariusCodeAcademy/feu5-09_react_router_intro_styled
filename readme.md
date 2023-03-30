@@ -24,3 +24,11 @@ https://reactrouter.com/en/main - docs
 4.  // sugeneruoti BookItems is bookData masyvo
     // atvaizduoti tik title ir metus
 5.  BookItems turi buti nuorodos elementas kuris veda i SingleBookPage
+
+## practice uzd
+
+1. Sukurti NewBookPage.jsx
+2. padaryti kad /books/new adresu atsidarytu NewBookPage komponentas
+3. prideti i navigacija 'Add book' nuoroda.
+4. NewBookPage butu forma su ivesties laukais, sukurti naujai knygai.
+5. surinkti inputu reiksmes ir pateikimo metu iskonsologini naujos knygo objekta
