@@ -75,7 +75,9 @@ function BooksPage() {
       <p>Here are our books</p>
 
       <List>
-        <BookListItem />
+        {bookData.map((bObj) => (
+          <BookListItem key={bObj.id} item={bObj} />
+        ))}
       </List>
     </div>
   );
