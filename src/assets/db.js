@@ -5,7 +5,7 @@ export const bookData = [
     author: 'J.D. Salinger',
     year: 1951,
     genre: 'Bildungsroman',
-    category: 'Fiction',
+    category: 'Fantasy',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const bookData = [
     author: 'George Orwell',
     year: 1949,
     genre: 'Dystopian Fiction',
-    category: 'Fiction',
+    category: 'Fantasy',
   },
   {
     id: 4,

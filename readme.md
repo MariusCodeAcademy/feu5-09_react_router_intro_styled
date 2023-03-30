@@ -32,3 +32,10 @@ https://reactrouter.com/en/main - docs
 3. prideti i navigacija 'Add book' nuoroda.
 4. NewBookPage butu forma su ivesties laukais, sukurti naujai knygai.
 5. surinkti inputu reiksmes ir pateikimo metu iskonsologini naujos knygo objekta
+
+## BooksPage filtras
+
+1. state saugom filtro reiksme
+2. pagal state issfiltruojam ir atvaizduojam tik tos kategorijos knygas
+3. priskirti kiekvienai kategorijai bg color ir sarase turetu matytis spalvos
+4. padaryti filtravima pagal pavadinima (input type=search)

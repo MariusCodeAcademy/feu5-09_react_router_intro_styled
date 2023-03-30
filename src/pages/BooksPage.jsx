@@ -9,13 +9,18 @@ const List = styled.ul`
 `;
 
 function BooksPage() {
-  // sugeneruoti BookItems is bookData masyvo
-  // atvaizduoti tik title ir metus
+  // state saugom filtro reiksme
+  // pagal state issfiltruojam ir atvaizduojam tik tos kategorijos knygas
+  // priskirti kiekvienai kategorijai bg color ir sarase turetu matytis spalvos
   return (
     <div className="container page">
       <h1>BooksPage</h1>
       <p>Here are our books</p>
-
+      <select>
+        <option value="all">Show all</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Fiction">Fiction</option>
+      </select>
       <List>
         {bookData.map((bObj) => (
           <BookListItem key={bObj.id} item={bObj} />
