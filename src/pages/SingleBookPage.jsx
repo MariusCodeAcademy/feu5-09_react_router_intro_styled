@@ -1,7 +1,13 @@
 import React from 'react';
 
 function SingleBookPage() {
-  return <div>SingleBookPage</div>;
+  // pasiimti knygos id is books data
+  // sugeneruoti atitinkama knyga
+  return (
+    <div className="container page">
+      <h1>SingleBookPage</h1>
+    </div>
+  );
 }
 
 export default SingleBookPage;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Li = styled.li`
@@ -19,8 +20,10 @@ const Year = styled.p`
 function BookListItem({ item }) {
   return (
     <Li>
-      <Title>{item.title}</Title>
-      <Year>{item.year}</Year>
+      <Link to={`/books/${item.id}`}>
+        <Title>{item.title}</Title>
+        <Year>{item.year}</Year>
+      </Link>
     </Li>
   );
 }
