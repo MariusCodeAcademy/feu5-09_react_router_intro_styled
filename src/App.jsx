@@ -8,6 +8,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import NotFound from './pages/NotFound';
 import BooksPage from './pages/BooksPage';
+import SingleBookPage from './pages/SingleBookPage';
 
 function App() {
   // padaryti kad /books adresas parodytu BooksList.jsx komponenta
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/books" element={<BooksPage />} />
+        <Route path="/books/1" element={<SingleBookPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
