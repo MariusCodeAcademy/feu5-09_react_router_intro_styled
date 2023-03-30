@@ -23,22 +23,23 @@ const SiteLink = styled(NavLink)`
   }
 `;
 
+const navData = [
+  { id: 1, to: '/', title: 'Home' },
+  { id: 2, to: '/books', title: 'Books' },
+  { id: 5, to: '/books/new', title: 'Add Book' },
+  { id: 3, to: '/about', title: 'About' },
+  { id: 4, to: '/contacts', title: 'Contacts' },
+];
+
 function Header() {
   return (
     <header className="container">
       <Nav>
-        <SiteLink to="/" className="navLink">
-          Home
-        </SiteLink>
-        <SiteLink to="/books" className="navLink">
-          Books
-        </SiteLink>
-        <SiteLink to="/about" className="navLink">
-          About
-        </SiteLink>
-        <SiteLink to="/contacts" className="navLink">
-          Contacts
-        </SiteLink>
+        {navData.map(({ id, to, title }) => (
+          <SiteLink key={id} to={to}>
+            {title}
+          </SiteLink>
+        ))}
       </Nav>
     </header>
   );
