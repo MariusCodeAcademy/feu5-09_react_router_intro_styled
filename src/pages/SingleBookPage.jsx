@@ -1,6 +1,9 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function SingleBookPage() {
+  const params = useParams();
+  console.log('params ===', params);
   // pasiimti knygos id is books data
   // sugeneruoti atitinkama knyga
   return (

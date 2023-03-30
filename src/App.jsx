@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/books" element={<BooksPage />} />
-        <Route path="/books/1" element={<SingleBookPage />} />
+        <Route path="/books/:bookId" element={<SingleBookPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
