@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -5,10 +6,20 @@ const Nav = styled.nav`
   gap: 1rem;
   background-color: #333;
   color: #fff;
-  .navLink {
-    display: block;
-    padding: 0.5em 1em;
-    background-color: #333;
+`;
+
+const SiteLink = styled(NavLink)`
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #333;
+
+  &:hover {
+    background-color: #aeaeae;
+  }
+
+  &.active {
+    text-decoration: underline;
+    background-color: tomato;
   }
 `;
 
@@ -16,15 +27,15 @@ function Header() {
   return (
     <header className="container">
       <Nav>
-        <a href="/" className="navLink">
+        <SiteLink to="/" className="navLink">
           Home
-        </a>
-        <a href="/about" className="navLink">
+        </SiteLink>
+        <SiteLink to="/about" className="navLink">
           About
-        </a>
-        <a href="/contacts" className="navLink">
+        </SiteLink>
+        <SiteLink to="/contacts" className="navLink">
           Contacts
-        </a>
+        </SiteLink>
       </Nav>
     </header>
   );

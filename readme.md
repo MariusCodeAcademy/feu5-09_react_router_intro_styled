@@ -5,7 +5,8 @@ https://reactrouter.com/en/main - docs
 
 1. `npm i react-router-dom `
 2. prideti BrowserRouter i main.jsx `import { BrowserRouter } from 'react-router-dom';`
-3. susikurti Routes ten kur bus generuojami koponentai
+3. susikurti Routes ten kur bus generuojami koponentai.
+4. Navigacijai naudojam Link ir NavLink komponentus.
 
 ## eslint
 

@@ -1,3 +1,8 @@
 .page {
   min-height: 85vh;
 }
+
+.active {
+  text-decoration: underline;
+  background-color: tomato;
+}

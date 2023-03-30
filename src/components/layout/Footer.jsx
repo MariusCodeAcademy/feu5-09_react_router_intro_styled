@@ -12,7 +12,11 @@ function Footer() {
   const date = new Date();
   const formatedDate = date.toLocaleString('lt-LT', { dateStyle: 'medium' });
 
-  return <MyFooter>Visos teises saugomos {formatedDate}</MyFooter>;
+  return (
+    <MyFooter>
+      Visos teises <a href="https://google.com">saugomos</a> {formatedDate}
+    </MyFooter>
+  );
 }
 
 export default Footer;
