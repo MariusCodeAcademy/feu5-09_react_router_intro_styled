@@ -9,6 +9,8 @@ import Footer from './components/layout/Footer';
 import NotFound from './pages/NotFound';
 
 function App() {
+  // padaryti kad /books adresas parodytu BooksList.jsx komponenta
+  // padaryti kad /books/1 adresas parodytu SingleBookPage.jsx komponenta
   return (
     <div className="">
       <Header />
