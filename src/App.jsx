@@ -15,6 +15,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
       </Routes>
+      {/* suukrti Footer.jsx ikelti ji i App 
+      footer viduje atvaizduoti data is new Date() 2023-02-02
+      minimaliai pastilizuoti footer
+      */}
       <footer className="container">2023</footer>
     </div>
   );
