@@ -28,7 +28,12 @@ const bookData = [
 function BooksPage() {
   // sugeneruoti BookItems is bookData masyvo
   // atvaizduoti tik title ir metus
-  return <div>BooksPage</div>;
+  return (
+    <div className="container page">
+      <h1>BooksPage</h1>
+      <p>Here are our books</p>
+    </div>
+  );
 }
 
 export default BooksPage;

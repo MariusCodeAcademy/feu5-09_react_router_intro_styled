@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import NotFound from './pages/NotFound';
+import BooksPage from './pages/BooksPage';
 
 function App() {
   // padaryti kad /books adresas parodytu BooksList.jsx komponenta
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/books" element={<BooksPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

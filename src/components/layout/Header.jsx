@@ -30,6 +30,9 @@ function Header() {
         <SiteLink to="/" className="navLink">
           Home
         </SiteLink>
+        <SiteLink to="/books" className="navLink">
+          Books
+        </SiteLink>
         <SiteLink to="/about" className="navLink">
           About
         </SiteLink>
