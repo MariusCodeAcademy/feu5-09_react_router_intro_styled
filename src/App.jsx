@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import ContactsPage from './pages/ContactPage';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -15,11 +16,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
       </Routes>
-      {/* suukrti Footer.jsx ikelti ji i App 
-      footer viduje atvaizduoti data is new Date() 2023-02-02
-      minimaliai pastilizuoti footer
-      */}
-      <footer className="container">2023</footer>
+
+      <Footer />
     </div>
   );
 }
