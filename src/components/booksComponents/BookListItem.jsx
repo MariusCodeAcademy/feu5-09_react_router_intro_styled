@@ -32,14 +32,15 @@ function BookListItem({ item }) {
   //                              'Fiction'
   const currentColor = catColors[item.category];
   // console.log('currentColor ===', currentColor);
+
   return (
     <Li bg={currentColor}>
       <Link to={`/books/${item.id}`}>
         <Title>{item.title}</Title>
         <Year>{item.year}</Year>
         <Category>Category: {item.category}</Category>
-        <button>Delete</button>
       </Link>
+      <button>Delete</button>
     </Li>
   );
 }
