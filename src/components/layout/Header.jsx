@@ -36,7 +36,7 @@ function Header() {
     <header className="container">
       <Nav>
         {navData.map(({ id, to, title }) => (
-          <SiteLink key={id} to={to}>
+          <SiteLink end key={id} to={to}>
             {title}
           </SiteLink>
         ))}
