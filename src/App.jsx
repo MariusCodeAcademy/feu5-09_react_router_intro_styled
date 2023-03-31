@@ -27,6 +27,8 @@ function App() {
           <Route path=":bookId" element={<SingleBookPage />} />
           <Route path="new" element={<NewBookPage />} />
         </Route>
+        <Route path="/books-old" element={<BooksPage />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
 
