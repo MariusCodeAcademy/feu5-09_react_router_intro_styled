@@ -10,7 +10,15 @@ https://reactrouter.com/en/main - docs
 
 ## eslint
 
-1. `npm init @eslint/config`
+1. `npm install vite-plugin-eslint eslint eslint-config-react-app --save-dev`
+2. .eslintrc > `{"extends": ["react-app"]}`
+3.
+
+```js
+// vite.config.js
+import eslint from 'vite-plugin-eslint';
+plugins: [react(), eslint()],
+```
 
 ## styled
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -16,6 +15,8 @@ const Title = styled.h2`
 const Year = styled.p`
   font-weight: bold;
 `;
+
+const a = '5';
 
 function BookListItem({ item }) {
   return (
