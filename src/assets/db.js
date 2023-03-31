@@ -45,7 +45,7 @@ export const bookData = [
     author: 'Plato',
     year: -380,
     genre: 'Philosophy',
-    category: 'Non-fiction',
+    category: 'Reality',
   },
   {
     id: 7,
@@ -53,6 +53,6 @@ export const bookData = [
     author: 'Charles Darwin',
     year: 1859,
     genre: 'Science',
-    category: 'Non-fiction',
+    category: 'Reality',
   },
 ];
