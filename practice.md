@@ -1,4 +1,4 @@
-# Praktice
+# Practice
 
 1. susikuriam nauja projekta nuo starterio arba su vite. 10_react_formik_validations
 2. sukurti 3 puslapius. Home, About, Contact.
@@ -9,6 +9,8 @@
    - /contact => Contact
 5. Sukurti Navigacijos komponenta kuris tures nuorodas vaikscioti po puslapius
 6. Sukurti contact form Componenta ir ikelti ji i Contact puslapi. dizainas ir laukai https://colorlib.com/etc/regform/colorlib-regform-5/
+   ![](https://img001.prntscr.com/file/img001/aUJPVmlVSaactWQCd9w4KQ.png)
+
 7. Forma valdom su formik. useFormik objekto pagalba susieti inputus ir ju atnaujinimo funkcijas.
 8. Validuoti visus laukus:
 
