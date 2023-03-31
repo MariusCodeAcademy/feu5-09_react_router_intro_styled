@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
-import { bookData } from '../assets/db';
+
 import BookItem from '../components/booksComponents/BookItem';
+import { getBooks } from '../services/bookServices';
 
 function SingleBookPage() {
+  const books = getBooks();
   const navigate = useNavigate();
   const { bookId } = useParams();
   console.log('bookId ===', bookId);
   // pasiimti knygos id is books data
   // sugeneruoti atitinkama knyga
-  console.log('bookData ===', bookData);
+  console.log('books ===', books);
   // surasti bookData konkretu book objekta pagal bookId
-  const foundBookObj = bookData.find((bObj) => bObj.id === +bookId);
+  const foundBookObj = books.find((bObj) => +bObj.id === +bookId);
   // ar radom ?
   if (foundBookObj) {
     console.log('radom foundBookObj ===', foundBookObj);

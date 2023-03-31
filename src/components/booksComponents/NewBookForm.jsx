@@ -20,11 +20,11 @@ function NewBookForm({ onNewBook }) {
     validationSchema: Yup.object({
       title: Yup.string()
         .min(3, 'Maziausiai 3 raides')
-        .max(10, 'Daugiausiai 10')
+        .max(50, 'Daugiausiai 10')
         .required('Butinas laukas'),
       author: Yup.string()
         .min(3, 'Maziausiai 3 raides')
-        .max(10, 'Daugiausiai 10')
+        .max(50, 'Daugiausiai 10')
         .required('Butinas laukas'),
       year: Yup.number().positive().moreThan(1000).max(2023).required(),
       email: Yup.string()

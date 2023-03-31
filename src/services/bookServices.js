@@ -11,7 +11,7 @@ function saveBooks(books) {
 
 function createBook(book) {
   const books = getBooks();
-  const newBook = { id: Math.random().toString().slice(2), ...book };
+  const newBook = { id: +Math.random().toString().slice(2), ...book };
   books.push(newBook);
   saveBooks(books);
   return newBook;
