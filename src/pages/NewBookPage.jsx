@@ -2,6 +2,12 @@ import React from 'react';
 import NewBookForm from '../components/booksComponents/NewBookForm';
 
 function NewBookPage() {
+  //
+  function handleNewBook() {
+    // gauto book objekta
+    console.log('new book object');
+  }
+
   return (
     <div className="container page">
       <h1>NewBookPage</h1>
