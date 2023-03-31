@@ -12,28 +12,11 @@ function NewBookForm({ onNewBook }) {
       category: '',
     },
     onSubmit: (values) => {
-      console.log('submit', values);
+      // console.log('submit', values);
+      onNewBook(values);
     },
   });
 
-  // const [title, setTitle] = useState('');
-  // const [author, setAuthor] = useState('');
-  // const [year, setYear] = useState('');
-  // const [genre, setGenre] = useState('');
-  // const [category, setCategory] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    // const book = { title, author, year, genre, category };
-    // console.log('book ===', book);
-    // onNewBook(book);
-    // createBook(book);
-    // setTitle('');
-    // setAuthor('');
-    // setYear('');
-    // setGenre('');
-    // setCategory('');
-  }
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
