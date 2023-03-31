@@ -1,34 +1,48 @@
+import { useFormik } from 'formik';
 import React from 'react';
 import { useState } from 'react';
 
 function NewBookForm({ onNewBook }) {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [year, setYear] = useState('');
-  const [genre, setGenre] = useState('');
-  const [category, setCategory] = useState('');
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      author: '',
+      year: '1984',
+      genre: '',
+      category: '',
+    },
+    onSubmit: (values) => {
+      console.log('submit', values);
+    },
+  });
+
+  // const [title, setTitle] = useState('');
+  // const [author, setAuthor] = useState('');
+  // const [year, setYear] = useState('');
+  // const [genre, setGenre] = useState('');
+  // const [category, setCategory] = useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
-    const book = { title, author, year, genre, category };
+    // const book = { title, author, year, genre, category };
     // console.log('book ===', book);
-    onNewBook(book);
+    // onNewBook(book);
     // createBook(book);
-    setTitle('');
-    setAuthor('');
-    setYear('');
-    setGenre('');
-    setCategory('');
+    // setTitle('');
+    // setAuthor('');
+    // setYear('');
+    // setGenre('');
+    // setCategory('');
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={formik.handleSubmit}>
       <div>
         <label htmlFor="title">Title:</label>
         <input
           type="text"
           id="title"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          value={formik.values.title}
+          onChange={formik.handleChange}
         />
       </div>
       <div>
@@ -36,8 +50,8 @@ function NewBookForm({ onNewBook }) {
         <input
           type="text"
           id="author"
-          value={author}
-          onChange={(event) => setAuthor(event.target.value)}
+          value={formik.values.author}
+          onChange={formik.handleChange}
         />
       </div>
       <div>
@@ -45,8 +59,8 @@ function NewBookForm({ onNewBook }) {
         <input
           type="text"
           id="year"
-          value={year}
-          onChange={(event) => setYear(event.target.value)}
+          value={formik.values.year}
+          onChange={formik.handleChange}
         />
       </div>
       <div>
@@ -54,16 +68,16 @@ function NewBookForm({ onNewBook }) {
         <input
           type="text"
           id="genre"
-          value={genre}
-          onChange={(event) => setGenre(event.target.value)}
+          value={formik.values.genre}
+          onChange={formik.handleChange}
         />
       </div>
       <div>
         <label htmlFor="category">Category:</label>
         <select
           id="category"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
+          value={formik.values.category}
+          onChange={formik.handleChange}
         >
           <option value="">Select a category</option>
           <option value="Fiction">Fiction</option>
