@@ -16,8 +16,6 @@ const Year = styled.p`
   font-weight: bold;
 `;
 
-const a = '5';
-
 function BookListItem({ item }) {
   return (
     <Li>
