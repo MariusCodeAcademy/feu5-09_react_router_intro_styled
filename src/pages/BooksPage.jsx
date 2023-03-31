@@ -19,18 +19,21 @@ const selectOpt = [
 ];
 
 function BooksPage() {
-  const [selectValue, setSelectValue] = useState('Reality');
+  const [selectValue, setSelectValue] = useState('all');
   // state saugom filtro reiksme
   function handleSelect(e) {
     console.log('handleSelect');
     setSelectValue(e.target.value);
   }
   // pagal state issfiltruojam ir atvaizduojam tik tos kategorijos knygas
-  let filteredBooks = bookData.filter((bObj) => bObj.category === selectValue);
+  let filteredBooks =
+    selectValue === 'all'
+      ? bookData
+      : bookData.filter((bObj) => bObj.category === selectValue);
 
-  if (selectValue === 'all') {
-    filteredBooks = bookData;
-  }
+  // if (selectValue === 'all') {
+  //   filteredBooks = bookData;
+  // }
   // priskirti kiekvienai kategorijai bg color ir sarase turetu matytis spalvos
   return (
     <div className="container page">
