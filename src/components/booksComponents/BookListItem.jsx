@@ -38,6 +38,7 @@ function BookListItem({ item }) {
         <Title>{item.title}</Title>
         <Year>{item.year}</Year>
         <Category>Category: {item.category}</Category>
+        <button>Delete</button>
       </Link>
     </Li>
   );

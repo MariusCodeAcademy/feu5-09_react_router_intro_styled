@@ -36,7 +36,7 @@ function updateBook(id, updates) {
 
 function deleteBook(id) {
   const books = getBooks();
-  const index = books.findIndex((book) => book.id === id);
+  const index = books.findIndex((book) => +book.id === +id);
   if (index === -1) {
     return null;
   }

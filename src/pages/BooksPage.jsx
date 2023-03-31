@@ -46,6 +46,11 @@ function BooksPage() {
   //   filteredBooks = bookData;
   // }
   // priskirti kiekvienai kategorijai bg color ir sarase turetu matytis spalvos
+
+  function handleDelete(id) {
+    // deleteBook
+    // setMainBooksArr(getBooks())
+  }
   return (
     <div className="container page">
       <h1>BooksPage</h1>
