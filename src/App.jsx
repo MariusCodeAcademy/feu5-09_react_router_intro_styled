@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import BooksPage from './pages/BooksPage';
 import SingleBookPage from './pages/SingleBookPage';
 import NewBookPage from './pages/NewBookPage';
+import BooksPageLayout from './pages/BooksPageLayout';
 
 function App() {
   // padaryti kad /books adresas parodytu BooksList.jsx komponenta
@@ -22,9 +23,10 @@ function App() {
         <Route path="/home" element={<Navigate to="/" />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/books/:bookId" element={<SingleBookPage />} />
-        <Route path="/books/new" element={<NewBookPage />} />
+        <Route path="/books" element={<BooksPageLayout />}>
+          <Route path=":bookId" element={<SingleBookPage />} />
+          <Route path="new" element={<NewBookPage />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 
