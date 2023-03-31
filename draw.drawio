@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="kkP8yQQ12NTprXvEUb91" name="Page-1">
+        <mxGraphModel dx="743" dy="346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&amp;lt;&amp;nbsp;&lt;span style=&quot;color: rgb(255, 198, 0); background-color: rgb(25, 53, 73); font-family: &amp;quot;Cascadia code PL&amp;quot;, Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;NewBookForm&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;/&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&amp;lt;&amp;nbsp;&lt;span style=&quot;color: rgb(255, 198, 0); background-color: rgb(25, 53, 73); font-family: &amp;quot;Cascadia code PL&amp;quot;, Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;NewBookPage&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;/&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="book" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="290" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="newBookHandler(bookObj)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="100" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="onNewBook()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="260" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="onNewBook()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="110" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="newBookHandler(bookObj)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="110" width="170" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-function NewBookForm() {
+function NewBookForm({ onNewBook }) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [year, setYear] = useState('');
@@ -11,7 +11,8 @@ function NewBookForm() {
   function handleSubmit(event) {
     event.preventDefault();
     const book = { title, author, year, genre, category };
-    console.log('book ===', book);
+    // console.log('book ===', book);
+    onNewBook(book);
     // createBook(book);
     setTitle('');
     setAuthor('');
