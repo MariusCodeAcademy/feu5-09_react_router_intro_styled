@@ -6,6 +6,8 @@ function NewBookPage() {
   function handleNewBook(bookObj) {
     // gauto book objekta
     console.log('new book object', bookObj);
+    // panaudoti createBook() ir irasyti knyga
+    // irase naviguoti i /books page (useNavigate)
   }
 
   return (
