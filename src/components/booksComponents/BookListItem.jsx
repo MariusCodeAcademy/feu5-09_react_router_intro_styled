@@ -6,7 +6,7 @@ const Li = styled.li`
   border: 1px solid black;
   padding: 1.5em;
   border-radius: 4px;
-  background-color: transparent;
+  background-color: ${(props) => props.bg || 'transparent'};
 `;
 
 const Title = styled.h2`
@@ -23,17 +23,17 @@ const Category = styled.p`
 
 function BookListItem({ item }) {
   const catColors = {
-    Fantasy: 'tomato',
-    Fiction: 'blue',
-    Reality: 'green',
+    Fantasy: '#dde0ab',
+    Fiction: '#97cba9',
+    Reality: '#668ba4',
   };
 
   // item.category === 'Fiction'
-
-  const currentColor = '';
-
+  //                              'Fiction'
+  const currentColor = catColors[item.category];
+  // console.log('currentColor ===', currentColor);
   return (
-    <Li>
+    <Li bg={currentColor}>
       <Link to={`/books/${item.id}`}>
         <Title>{item.title}</Title>
         <Year>{item.year}</Year>
