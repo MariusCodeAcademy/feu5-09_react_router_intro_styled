@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import React from 'react';
-import { useState } from 'react';
+import * as Yup from 'yup';
 
 function NewBookForm({ onNewBook }) {
   const formik = useFormik({
@@ -11,12 +11,18 @@ function NewBookForm({ onNewBook }) {
       genre: '',
       category: '',
     },
+    validationSchema: Yup.object({
+      title: Yup.string()
+        .min(3, 'Maziausiai 3 raides pleazz')
+        .max(10, 'Daugiausiai 10')
+        .required('Butinas laukas'),
+    }),
     onSubmit: (values) => {
       // console.log('submit', values);
       onNewBook(values);
     },
   });
-
+  console.log('formik.errors', formik.errors);
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
@@ -27,6 +33,7 @@ function NewBookForm({ onNewBook }) {
           value={formik.values.title}
           onChange={formik.handleChange}
         />
+        {formik.errors.title && <p>{formik.errors.title}</p>}
       </div>
       <div>
         <label htmlFor="author">Author:</label>
