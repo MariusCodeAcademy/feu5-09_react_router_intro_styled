@@ -36,8 +36,8 @@ function NewBookForm({ onNewBook }) {
       onNewBook(values);
     },
   });
-  console.log('formik.errors', formik.errors);
-  console.log('formik.touched', formik.touched);
+  // console.log('formik.errors', formik.errors);
+  // console.log('formik.touched', formik.touched);
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
