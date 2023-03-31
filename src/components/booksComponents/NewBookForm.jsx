@@ -38,6 +38,7 @@ function NewBookForm({ onNewBook }) {
     },
   });
   console.log('formik.errors', formik.errors);
+  console.log('formik.touched', formik.touched);
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
@@ -46,9 +47,12 @@ function NewBookForm({ onNewBook }) {
           type="text"
           id="title"
           value={formik.values.title}
+          onBlur={formik.handleBlur}
           onChange={formik.handleChange}
         />
-        {formik.errors.title && <ErrorMsg>{formik.errors.title}</ErrorMsg>}
+        {formik.touched.title && formik.errors.title && (
+          <ErrorMsg>{formik.errors.title}</ErrorMsg>
+        )}
       </div>
       <div>
         <label htmlFor="author">Author:</label>
@@ -56,9 +60,12 @@ function NewBookForm({ onNewBook }) {
           type="text"
           id="author"
           value={formik.values.author}
+          onBlur={formik.handleBlur}
           onChange={formik.handleChange}
         />
-        {formik.errors.author && <ErrorMsg>{formik.errors.author}</ErrorMsg>}
+        {formik.touched.author && formik.errors.author && (
+          <ErrorMsg>{formik.errors.author}</ErrorMsg>
+        )}
       </div>
       <div>
         <label htmlFor="year">Year:</label>
@@ -66,9 +73,12 @@ function NewBookForm({ onNewBook }) {
           type="text"
           id="year"
           value={formik.values.year}
+          onBlur={formik.handleBlur}
           onChange={formik.handleChange}
         />
-        {formik.errors.year && <ErrorMsg>{formik.errors.year}</ErrorMsg>}
+        {formik.touched.year && formik.errors.year && (
+          <ErrorMsg>{formik.errors.year}</ErrorMsg>
+        )}
       </div>
       <div>
         <label htmlFor="genre">Genre:</label>
@@ -76,9 +86,12 @@ function NewBookForm({ onNewBook }) {
           type="text"
           id="genre"
           value={formik.values.genre}
+          onBlur={formik.handleBlur}
           onChange={formik.handleChange}
         />
-        {formik.errors.genre && <ErrorMsg>{formik.errors.genre}</ErrorMsg>}
+        {formik.touched.genre && formik.errors.genre && (
+          <ErrorMsg>{formik.errors.genre}</ErrorMsg>
+        )}
       </div>
       <div>
         <label htmlFor="category">Category:</label>
