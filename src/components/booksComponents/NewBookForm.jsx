@@ -14,7 +14,7 @@ function NewBookForm({ onNewBook }) {
       title: '',
       author: '',
       year: '1984',
-      genre: '',
+      email: '',
       category: '',
     },
     validationSchema: Yup.object({
@@ -27,9 +27,8 @@ function NewBookForm({ onNewBook }) {
         .max(10, 'Daugiausiai 10')
         .required('Butinas laukas'),
       year: Yup.number().positive().moreThan(1000).max(2023).required(),
-      genre: Yup.string()
-        .min(3, 'Maziausiai 3 raides')
-        .max(10, 'Daugiausiai 10')
+      email: Yup.string()
+        .email('Patikrinkite emaila')
         .required('Butinas laukas'),
     }),
     onSubmit: (values) => {
@@ -81,16 +80,16 @@ function NewBookForm({ onNewBook }) {
         )}
       </div>
       <div>
-        <label htmlFor="genre">Genre:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="text"
-          id="genre"
-          value={formik.values.genre}
+          id="email"
+          value={formik.values.email}
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
         />
-        {formik.touched.genre && formik.errors.genre && (
-          <ErrorMsg>{formik.errors.genre}</ErrorMsg>
+        {formik.touched.email && formik.errors.email && (
+          <ErrorMsg>{formik.errors.email}</ErrorMsg>
         )}
       </div>
       <div>
