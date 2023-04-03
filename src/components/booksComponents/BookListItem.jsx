@@ -21,7 +21,7 @@ const Category = styled.p`
   float: right;
 `;
 
-function BookListItem({ item }) {
+function BookListItem({ item, onDelete }) {
   const catColors = {
     Fantasy: '#dde0ab',
     Fiction: '#97cba9',
@@ -40,7 +40,7 @@ function BookListItem({ item }) {
         <Year>{item.year}</Year>
         <Category>Category: {item.category}</Category>
       </Link>
-      <button>Delete</button>
+      <button onClick={() => onDelete(item.id)}>Delete</button>
     </Li>
   );
 }

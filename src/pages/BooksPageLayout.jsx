@@ -3,7 +3,7 @@ import { bookData } from '../assets/db';
 import BookListItem from '../components/booksComponents/BookListItem';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { getBooks } from '../services/bookServices';
+import { deleteBook, getBooks } from '../services/bookServices';
 import { saveBooks } from '../services/bookServices';
 import Grid from '../components/ui/grid/Grid';
 import { Outlet } from 'react-router-dom';
@@ -51,7 +51,9 @@ function BooksPageLayout() {
 
   function handleDelete(id) {
     // deleteBook
-    // setMainBooksArr(getBooks())
+    console.log('id to delete ===', id);
+    deleteBook(id);
+    setMainBooksArr(getBooks());
   }
   return (
     <div className="container page">
@@ -67,7 +69,12 @@ function BooksPageLayout() {
       <Grid cols="2">
         <List>
           {filteredBooks.map((bObj) => (
-            <BookListItem key={bObj.id} item={bObj} />
+            <BookListItem
+              key={bObj.id}
+              item={bObj}
+              test="5"
+              onDelete={handleDelete}
+            />
           ))}
         </List>
         <div>

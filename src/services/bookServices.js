@@ -1,3 +1,5 @@
+import { bookData } from '../assets/db';
+
 const BOOKS_KEY = 'books';
 
 function getBooks() {
@@ -44,6 +46,13 @@ function deleteBook(id) {
   books.splice(index, 1);
   saveBooks(books);
   return deletedBook;
+}
+
+// rankinis knygu irasymas i localstorage
+const booksString = localStorage.getItem(BOOKS_KEY);
+if (!booksString) {
+  saveBooks(bookData);
+  console.log('saved Books from arr');
 }
 
 export { getBooks, createBook, getBookById, updateBook, deleteBook, saveBooks };

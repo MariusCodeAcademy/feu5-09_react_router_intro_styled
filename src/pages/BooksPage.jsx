@@ -23,8 +23,7 @@ const selectOpt = [
 
 function BooksPage() {
   const [mainBooksArr, setMainBooksArr] = useState([]);
-  // rankinis knygu irasymas i localstorage
-  // saveBooks(bookData);
+
   useEffect(() => {
     const books = getBooks();
     setMainBooksArr(books);
@@ -49,6 +48,7 @@ function BooksPage() {
 
   function handleDelete(id) {
     // deleteBook
+    console.log('id to delete ===', id);
     // setMainBooksArr(getBooks())
   }
   return (
